@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	
-	while((nread = getline(&line_buff, &len, file) != -1)
+	while((nread = getline(&line_buff, &len, file)) != -1)
 	{
 		printf("%s\n", line_buff)
 	}
