@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 	size_t len = 0;
 	ssize_t nread;
 	char *opcode;
+	stack_t *stack = NULL;
 	
 	if (argc != 2)
 	{
@@ -30,7 +31,7 @@ int main(int argc, char *argv[])
 		opcode = strtok(line_buff, "\n\t\r ");
 		if (!opcode && opcode[0] != '#')
 		{
-			printf("correct opcode");
+			get_func(opcode, &stack, line_number);
 		}
 		
 	}
