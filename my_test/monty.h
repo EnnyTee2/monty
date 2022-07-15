@@ -36,3 +36,6 @@ typedef struct instruction_s
 } instruction_t;
 
 #endif /* MONTY_H */
+
+
+void get_func(char *opcode, stack_t **stack, unsigned int line_number);
