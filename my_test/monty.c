@@ -25,6 +25,6 @@ int main(int argc, char *argv[])
 	
 	while((nread = getline(&line_buff, &len, file)) != -1)
 	{
-		printf("%s\n", line_buff)
+		printf("%s\n", line_buff);
 	}
 }
