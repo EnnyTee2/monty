@@ -36,5 +36,6 @@ typedef struct instruction_s
 } instruction_t;
 
 void get_func(char *opcode, stack_t **stack, unsigned int line_number);
+stack_t **add_stack(stack_t **stack_top, int element);
 
 #endif /* MONTY_H */
