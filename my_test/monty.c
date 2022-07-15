@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 int main(int argc, char *argv[])
@@ -8,6 +9,8 @@ int main(int argc, char *argv[])
 	char *line_buff = NULL;
 	size_t len = 0;
 	ssize_t nread;
+	char *opcode;
+	char *arg;
 	
 	if (argc != 2)
 	{
@@ -25,6 +28,9 @@ int main(int argc, char *argv[])
 	
 	while((nread = getline(&line_buff, &len, file)) != -1)
 	{
-		printf("%s\n", line_buff);
+		opcode = strtok(line_buff, "\n\t\r ");
+		printf("%s\n", opcode);
+		arg = strtok(NULL, "\n\t\r ");
+		printf("%i\n", atoi(arg));
 	}
 }
