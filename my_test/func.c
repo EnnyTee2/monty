@@ -6,8 +6,6 @@ void get_func(char *opcode, stack_t **stack, unsigned int line_number)
 		{"push", push},
 		{"pall", pall},
 		{"pop", pop},
-		{"add", add},
-		{"sub", sub},
 		{NULL, NULL}
 	}
 	int i = 0;
