@@ -7,8 +7,9 @@ void get_func(char *opcode, stack_t **stack, unsigned int line_number)
 		{"pall", pall},
 		{"pop", pop},
 		{NULL, NULL}
-	}
+	};
 	int i = 0;
+	
 	while (ops[i] != NULL)
 	{
 		if (ops[i].[0] == opcode)
