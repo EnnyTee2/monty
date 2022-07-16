@@ -5,21 +5,6 @@
  *
  */
 
-int main(void)
-{
-	stack_t *top = NULL;
-	
-	add_stack(&top, 8);
-	add_stack(&top, 10);
-	temp = top;
-	
-	while(temp != NULL)
-	{
-		
-	}
-	
-	printf("%i\n, top->element")
-	
 }
 
 stack_t **add_stack(stack_t **top, int element)
@@ -47,5 +32,5 @@ stack_t **add_stack(stack_t **top, int element)
 		temp->previous = node;
 		*top = node;
 	}
-	return (top);
+	return (*top);
 }
