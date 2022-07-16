@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void get_func(char *opcode, stack_t **stack, unsigned int line_number)
+void get_func(char *opcd, stack_t **stack, unsigned int line_number)
 {
 	instruction_t ops[] = {
 		{"push", push},
@@ -10,11 +10,12 @@ void get_func(char *opcode, stack_t **stack, unsigned int line_number)
 	};
 	int i = 0;
 	
-	while (ops[i] != NULL)
+	while (ops[i].opcode != NULL)
 	{
-		if (ops[i].[0] == opcode)
+		if (ops[i].opcode == opcd)
 		{
-			opcode[i].f(stack, line_number);
+			ops[i].f(stack, line_number);
+			return;
 		}
 		i++;
 	}
