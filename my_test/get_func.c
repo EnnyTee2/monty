@@ -14,7 +14,7 @@ void get_func(char *opcode, stack_t **stack, unsigned int line_number)
 	{
 		if (ops[i].[0] == opcode)
 		{
-			(void) (*f)(stack, line_number);
+			opcode[i].f(stack, line_number);
 		}
 		i++;
 	}
